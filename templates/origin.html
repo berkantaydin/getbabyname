@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{ char }}
+            <small>{{ gender|capitalize }} baby names</small>
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    {% for i in item %}
+    <div class="col-md-4">
+        {% if i != "" %}
+        <a href="{{ url_for('knowledge', name=i.name)}}">{{ i.name }}</a>
+        {% else %}
+        &nbsp;
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="pagination">
+            {% if page > 1 %}
+            <li><a href="{{ url_for('origins', origin=origin, page=page - 1)}}">&laquo;</a></li>
+            {% endif %}
+            {% if pages > 1 and page > 1 and page < pages %}
+            <li><a href="{{ url_for('origins', origin=origin, page=page-1)}}">{{page-1}}</a></li>
+            <li class="disabled"><a href="{{ url_for('origins', origin=origin, page=page)}}">{{page}}</a></li>
+            <li><a href="{{ url_for('origins', origin=origin, page=page+1)}}">{{page+1}}</a></li>
+            {% endif %}
+            {% if page < pages %}
+            <li><a href="{{ url_for('origins', origin=origin, page=page + 1)}}">&raquo;</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

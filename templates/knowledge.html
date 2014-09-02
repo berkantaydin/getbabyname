@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    .container {
+        padding-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>{{ item.name }}
+            <small>Meaning of {{ item.name }} name</small>
+        </h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        {% if item.pronounce != "" %}<br/>
+
+        <p class="text-primary">Pronounce</p>
+
+        <p class="info-texts text-success">{{item.pronounce}}</p>{% endif %}
+        <br/>
+
+        <p class="text-primary">Gender</p>
+
+        <p class="info-texts text-success">
+            {% if item.gender == "g" %}
+            Girl
+            {% elif item.gender == "b" %}
+            Boy
+            {% else %}
+            Unisex
+            {% endif %}
+            baby name
+        </p>
+        <br/>
+
+        <p class="text-primary">Origin</p>
+
+        <p class="info-texts text-success">{{item.origin}}</p>
+    </div>
+    <div class="col-md-4">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- getbabyname-336x280 -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:336px;height:280px"
+             data-ad-client="ca-pub-9516652609628392"
+             data-ad-slot="8482222781"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <div class="col-md-12">
+        <br/>
+
+        <p class="text-primary">Meaning</p>
+
+        <p class="info-texts text-success">{{item.meaning}}</p>
+    </div>
+    {% if seen.count() > 0 %}
+    <div class="col-md-12">
+        <br/>
+
+        <p class="text-primary">Who viewed this name also viewed</p>
+
+        <p class="info-texts text-success">
+            {% for item in seen %}
+            <a href="{{ url_for('knowledge', name=item.frm.name)}}">{{ item.frm.name }}</a> ,
+            {% endfor %}
+        </p>
+    </div>
+    {% endif %}
+
+    {% if famous.count() > 0 %}
+    <div class="col-md-12">
+        <br/>
+
+        <p class="text-primary">{{ item.name|capitalize }} named fifty random famous people</p>
+
+        <p class="info-texts text-success">
+            {% for item in famous %}
+            {{ item.name }}<span class="famous_little">{{ item.short_desc }}</span><br/>
+            {% endfor %}
+        </p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

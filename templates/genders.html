@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    .items {
+        margin: 4em;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Baby names by gender</h1>
+    </div>
+</div>
+
+<div class="row items">
+    <div class="col-md-4">
+        <a href="{{ url_for('genders', gender='boy')}}">Boy Baby Names</a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{ url_for('genders', gender='girl')}}">Girl Baby Names</a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{ url_for('genders', gender='unisex')}}">Unisex Baby Names</a>
+    </div>
+</div>
+</div>
+{% endblock %}

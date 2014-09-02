@@ -1,0 +1,5 @@
+flask
+flask_peewee
+tornado
+# Ülke/Irk bazlı german names gibi yap
+# Okunuşu - okunuşunu sesli dinlet

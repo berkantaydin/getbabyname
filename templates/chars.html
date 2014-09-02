@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    .items {
+        margin: 4em;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Baby names by initial letter</h1>
+    </div>
+</div>
+
+<div class="row items">
+    {% for i in item %}
+    <div class="col-md-4">
+        {% if i != "" %}
+        <a href="{{ url_for('chars', char=i)}}?">{{ i }}</a>
+        {% else %}
+        &nbsp;
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

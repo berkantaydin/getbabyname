@@ -1,0 +1,124 @@
+body {
+    font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: rgb(192, 228, 218) url('../img/tile-pattern.jpg') repeat;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+.main{
+    padding-top: 6em;
+}
+
+.pink-header {
+    padding-top: 0.875em;
+    background-color: rgb(251, 198, 192);
+    height: 6em;
+    font-size: 1em;
+}
+
+.header-right{
+    padding-top: 1em;
+}
+
+.header-right a, .navbar-brand{
+    font-size: 0.875em;
+    font-weight: bold;
+    color: rgb(54, 60, 68);
+    text-align: right;
+    padding-left: 20px;
+}
+
+a{
+    color: rgb(54, 60, 68);
+}
+
+.info-texts{
+    margin-left: 2em;
+}
+
+.toggle {
+    color: #fff;
+}
+
+.main-text-image {
+    margin-top: 6em;
+    max-width: 100% !important;
+}
+
+.main-search {
+    float: left;
+    height: 6em;
+    width: 80%;
+    background-color: rgb(131, 165, 177);
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    border: 0.5em solid rgb(194, 230, 220);
+    border-right: none;
+    text-align: center;
+    margin-top: 2em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.main-search-right {
+    width: 20%;
+    border: 0.5em solid rgb(194, 230, 220);
+    border-left: none;
+    background-color: rgb(131, 165, 177);
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    margin-top: 2em;
+    height: 6em;
+    font-size: 1em;
+    color: #fff;
+}
+
+
+footer{
+    position:absolute;
+    left:0;
+    width:100%;
+    background-color: rgb(54, 60, 68);
+    color: #fff;
+    margin-top: 6em;
+    padding-top: 2em;
+    font-size: 0.75em;
+    text-align: right;
+    overflow-x: hidden;
+    min-height: 10em;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(192, 228, 218);
+}
+
+footer a:hover{
+    color: rgb(192, 228, 218);
+}
+
+.main-search::-webkit-input-placeholder {
+    color: #fff;
+    font-size: 1.5em;
+    margin: auto;
+    padding: auto;
+    line-height: 1em;
+}
+
+.main-search::-moz-placeholder {
+    color: #fff;
+    font-size: 1.5em;
+    margin: auto;
+    padding: auto;
+    line-height: 1em;
+}
+​
+.bold{
+    font-weight: bold;
+}
+
+.famous_little{
+    margin-left: 10px;
+    font-size: 0.75em;
+}

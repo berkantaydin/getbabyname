@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+    .items {
+        margin: 1em;
+        font-size: 0.8em;
+    }
+</style>
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Origin based baby names</h1>
+    </div>
+</div>
+
+<div class="row items">
+    {% for origin in origins %}
+    <div class="col-md-4">
+        <a href="{{ url_for('origins', origin=origin)}}">{{origin|capitalize}} baby names</a>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

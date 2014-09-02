@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+
+{% block container %}
+<div class="row">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <img class="main-text-image" src="/static/img/mainText.png">
+        <br/>
+        <nobr>
+            <form role="search" action="{{ url_for('search') }}" method="post">
+                <input class="main-search" name="q" type="text" placeholder="search"/>
+                <button type="submit" class="main-search-right"> <i class="glyphicon glyphicon-search icon-white"></i></button>
+            </form>
+        </nobr>
+    </div>
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>
+{% endblock %}
